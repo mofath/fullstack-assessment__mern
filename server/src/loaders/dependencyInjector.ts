@@ -1,5 +1,6 @@
 import { Container } from 'typedi';
 import { connect } from 'mongoose';
+import { ThenArg } from '../types';
 import LoggerInstance from './../lib/logger';
 
 type Props = {
