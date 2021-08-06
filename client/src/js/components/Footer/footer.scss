@@ -1,0 +1,17 @@
+@import '../../../scss/index.scss';
+
+.footer {
+		background: linear-gradient(to right, $color-cerulean, $color-pacific-blue);
+		color: $color-white;
+		height: $footer-height;
+		display: block;
+}
+
+.footer__container {
+		max-width: $body-outer-max-width;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+}
