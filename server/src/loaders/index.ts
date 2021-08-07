@@ -9,15 +9,22 @@ const loader = async (app: Application, server: Server) => {
   const mongoConnection = await mongooseLoader();
   Logger.info('🧨 DB loaded and connected!');
 
+  const userModel = {
+    name: 'usersModel',
+    model: require('../models/user').default,
+  };
+
   await dependencyInjectorLoader({
     mongoConnection,
-    models: [],
+    models: [
+      userModel,
+    ],
   });
 
   Logger.info('🔥 Dependency Injector loaded');
 
   await expressLoader({ app });
-	
+
   Logger.info('🚀 Express loaded');
 };
 

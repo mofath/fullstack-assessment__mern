@@ -7,9 +7,11 @@ export const NotFoundErrorMiddleWare = ((req, res, next) => {
 
 /// error handlers
 export const ErrorHandlerMiddleware = ((err, req, res, next) => {
-  res.status(err.status || 500);
+  // TODO: Handle different errors
+  // Temporarily set status code to 400 to be able to caught in the client 
+  res.status = 400;
   res.json({
-    errors: {
+    error: {
       message: err.message,
     },
   });

@@ -1,0 +1,48 @@
+@import '../../../scss/index.scss';
+
+.headline {
+    display: block;
+    padding: 30px 0 10px;
+}
+
+@include mq($until: tablet) {
+    .headline--align-mobile-left {
+        text-align: left;
+    }
+
+    .headline--align-mobile-right {
+        text-align: right;
+    }
+
+    .headline--align-mobile-center {
+        text-align: center;
+    }
+}
+
+@include mq($from: tablet) {
+    .headline--align-tablet-left {
+        text-align: left;
+    }
+
+    .headline--align-tablet-right {
+        text-align: right;
+    }
+
+    .headline--align-tablet-center {
+        text-align: center;
+    }
+}
+
+@include mq($from: desk) {
+    .headline--align-desktop-left {
+        text-align: left;
+    }
+
+    .headline--align-desktop-right {
+        text-align: right;
+    }
+
+    .headline--align-desktop-center {
+        text-align: center;
+    }
+}
