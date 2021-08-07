@@ -29,6 +29,6 @@ export default function AuthForm({ login, signup }) {
 }
 
 AuthForm.propTypes = {
-  signup: PropTypes.func,
   login: PropTypes.func,
+  signup: PropTypes.func,
 };
