@@ -6,9 +6,9 @@ import {
 } from '../../../utils/inputValidationRules';
 
 export const formObj = {
-  username: {
+  password: {
     value: '',
-    validationRules: [requiredRule('username')],
+    validationRules: [requiredRule('Password')],
   },
   mobile: {
     value: '',
@@ -16,7 +16,7 @@ export const formObj = {
   },
 };
 
-export default function LoginForm(submit) {
+export default function LoginForm({ submit }) {
   const { handleInputChange, isFormValid, getValues, getErrors } =
     useForm(formObj);
 
@@ -43,9 +43,9 @@ export default function LoginForm(submit) {
         />
         <div className='auth-form__group'>
           <Input
-            type='text'
-            name='username'
-            placeholder='Username'
+            type='tel'
+            name='mobile'
+            placeholder='011-XXXX-XXXX'
             required
             onChange={handleInputChange}
             className='auth-form__input'
@@ -53,9 +53,9 @@ export default function LoginForm(submit) {
         </div>
         <div className='auth-form__group'>
           <Input
-            type='tel'
-            name='mobile'
-            placeholder='011-XXXX-XXXX'
+            type='password'
+            name='password'
+            placeholder='Password'
             required
             onChange={handleInputChange}
             className='auth-form__input'

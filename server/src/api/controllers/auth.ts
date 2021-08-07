@@ -11,7 +11,7 @@ export const signup = async (req: Request, res: Response, next: NextFunction) =>
       success: true,
     });
   } catch (error) {
-    logger.error('Something went wrong: AuthService: signup:', error)
+    logger.error('Something went wrong: AuthController: signup:', error)
     next(new Error(error.message));
   }
 };
@@ -25,7 +25,7 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
       user
     });
   } catch (error) {
-    logger.error('Something went wrong: AuthService: signup:', error)
+    logger.error('Something went wrong: AuthController: login:', error)
     next(new Error(error.message));
   }
 };

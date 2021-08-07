@@ -9,7 +9,11 @@ import {
 export const formObj = {
   username: {
     value: '',
-    validationRules: [requiredRule('username')],
+    validationRules: [requiredRule('Username')],
+  },
+  password: {
+    value: '',
+    validationRules: [requiredRule('Password')],
   },
   mobile: {
     value: '',
@@ -21,7 +25,7 @@ export const formObj = {
   },
 };
 
-export default function SignupForm(submit) {
+export default function SignupForm({ submit }) {
   const { handleInputChange, isFormValid, getValues, getErrors } =
     useForm(formObj);
 
@@ -55,6 +59,16 @@ export default function SignupForm(submit) {
             type='text'
             name='username'
             placeholder='Username'
+            required
+            onChange={handleInputChange}
+            className='auth-form__input'
+          />
+        </div>
+        <div className='auth-form__group'>
+          <Input
+            type='password'
+            name='password'
+            placeholder='Password'
             required
             onChange={handleInputChange}
             className='auth-form__input'
