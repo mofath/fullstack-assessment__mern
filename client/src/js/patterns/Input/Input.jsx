@@ -28,7 +28,7 @@ Input.propTypes = {
   value: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
-  type: PropTypes.oneOf(['text', 'password', 'email', 'tel']),
+  type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number']),
   placeholder: PropTypes.string,
   onChange: PropTypes.func,
   className: PropTypes.string,
